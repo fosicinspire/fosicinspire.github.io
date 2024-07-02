@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page3.css">
+    <title>buy now</title>
+</head>
+
+<body>
+    <form action="connect.php" method="post">
+        <div class="address">
+            <div class="innerdiv">
+            <div class="info">
+                <input type="hidden" name="productname" value="iron pendle tractor...">
+                <label for="name">Name : </label>
+                <input type="text" name="name" class="mobile" id="name" placeholder=" enter your name" required>
+                <label for="contact">Contact : </label>
+                <input type="text" name="contact" class="mobile" id="contact" placeholder=" enter your mobile number" required>
+                <label for="contact">Password : </label>
+                <input type="password" name="password" class="mobile" id="pass" placeholder=" enter a strong password" required>
+                <p style="color: red; font-size: 1rem;">Remember this password, it will help you to view the order details</p>
+            </div>
+            <div class="addressdiv">
+                <div class="addresstext">
+                    <label for="addresslabel">Address :</label>
+                </div> 
+                <input type="text" name="line1" id="addresslabel" placeholder=" address_Line_1" required>
+                <div class="line2div">
+                    <input type="text" name="line2" id="addresslabel" placeholder=" address_Line_2">
+                </div>
+            </div>
+            <div class="pincodediv">
+                <label for="pincodeid">Pincode : </label>
+                <input type="text" name="pincode" id="pincodeid" placeholder=" enter your area pincode" required>
+            </div>
+                <label for="cityid">City : </label>
+            <div class="citydiv">
+                <input type="text" name="city" id="cityid" placeholder=" enter your city" required>
+            </div>
+            <label for="stateid">State : </label>
+            <div class="statediv">
+                <input type="text" name="state" id="stateid" placeholder=" enter your state" required>
+        
+            </div>
+            <input type="submit" name="sb" id="submitbtn" value="proceed to payment">
+        </div>
+    </div>
+        </div>
+    </form>
+</body>
+
+</html>
