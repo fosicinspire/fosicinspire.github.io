@@ -1,0 +1,341 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+body {
+    width: auto;
+    background-color: #ffffff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.mobnav {
+    height: 42px;
+    background-color: rgb(0, 136, 129);
+    position: sticky;
+    top: 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.74);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.74);
+}
+
+#click,.checkbtn {
+    display: none;
+}
+
+.navbar {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 136, 129);
+    border-top: 1px solid rgba(0, 0, 0, 0.74);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.74);
+}
+
+.kar {
+    position: absolute;
+    right: 10px;
+}
+.navitems {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    display: flex;
+    margin-left: 4rem;
+}
+
+.realsearch {
+    width: 30%;
+    display: flex;
+}
+
+.backimgdiv {
+    height: 47vh;
+    background: rgba(0, 0, 0, 0.7) url(hillimg.jpg);
+    /* background-blend-mode: darken; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgb(87, 82, 82);
+}
+
+.midcontentimage {
+    height: 145px;
+    width: 145px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-left: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 25px 5px white;
+}
+.weblogo{
+    height: 80px;
+    width: 80px;
+}
+#laplogo{
+    height:32px;
+    width: 32px;
+}
+#moblogo{
+    height:32px;
+    width: 32px;
+    margin-top: 3px;
+    display: none;
+}
+#weblogo{
+    height:20px;
+    width: 20px;
+}
+#andlogo{
+    height:20px;
+    width: 20px;
+}
+
+
+.bigdiv {
+    height: 21rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2.50rem;
+}
+
+.productsdiv {
+    height: 21rem;
+    width: 19rem;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px 1px black;
+    transition: 1s;
+}
+
+.heading2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0.75rem;
+}
+
+.image {
+    height: 65%;
+    width: 15rem;
+    margin: auto;
+    vertical-align: bottom;
+    background-image: url(image1.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition : 1s;
+}
+.i2 {
+    background-image: url(image2.jpeg);
+}
+
+.i3 {
+    background-image: url(Wd1[1].jpg);
+}
+
+.i4 {
+    background-image: url(E1[1].jpg);
+}
+
+.i5 {
+    background-image: url(1.jpg);
+}
+
+.i6 {
+    background-image: url(Jeep1.jpg);
+}
+
+.i7 {
+    background-image: url(table1.webp);
+}
+
+.i8 {
+    background-image: url(shopping.webp);
+}
+
+.pricetext {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.10rem;
+    font-weight: 700;
+    color: red;
+}
+
+.footdiv {
+    color: white;
+    height: 16rem;
+    background-color: #1e1e1c;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footheading {
+    padding: 1rem 0rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inputcontact {
+    height: 1.5rem;
+    width: 20rem;
+    border-radius: 3px;
+    margin-top: 1rem;
+}
+
+.button {
+    height: 2rem;
+    width: 4rem;
+    background-color: rgb(0, 157, 255)
+}
+
+.navsearch {
+    margin: 0px 0px;
+    border: none;
+}
+
+.navbutton {
+    height: 1.5rem;
+    width: 3rem;
+    border-radius: 3px;
+    margin-left: 0.3rem;
+}
+.ratings { 
+    height: 1rem;
+    width: 15rem;
+    display: flex;
+    margin: auto;
+    margin-top: 1rem;
+}
+.ratings i {
+    margin-top: 0.25rem;
+    color: #fcac00;
+}
+.ratings p {
+    margin-left: 2.25rem;
+}
+.footdiv li{
+    margin-top: 1rem;
+}
+.biggerdiv {
+    height: 48rem;
+}
+.centerdiv{
+    width: 80%;
+    display: flex;
+    justify-content: space-around
+}
+.imgcontent h1,p {
+    color:rgb(0, 0, 0)
+}
+.productsdiv:hover {
+   transform: translateY(-6px);
+}
+a {
+    color: white;
+    text-decoration: none;
+    transition: 1s;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+    *{
+        h1 {
+            font-size: 1.5rem;
+        }
+        h2 {
+            font-size: 1.25rem;
+        }
+        p {
+            font-size: 1rem;
+            color:rgb(255, 255, 255);
+        }
+        .mobnav {
+            width: 500px;
+        }
+        .contenttext {
+            color: rgb(255, 255, 255);
+        }
+    }
+    #moblogo{
+        display: flex;
+    }
+    #laplogo{
+        display: none;
+    }
+    .formedia {
+        display: none;
+    }
+    .biggerdiv{
+        padding-bottom : 2rem;
+        height: auto;
+        width: 500px;
+    }
+    .bigdiv {
+        margin-top: 0;
+        height: auto;
+        flex-direction: column;
+    }
+    .productsdiv {
+        margin: auto;
+        margin-top: 1rem;
+        height: 21rem;
+        width: 19rem;
+    }
+    .image {
+        border-radius: 5px;
+    }
+    .backimgdiv {
+        width: 500px;
+    }
+    .navbar {
+        position: absolute;
+        display:none;
+        right: -300px;
+        margin-top: 42px;
+        flex-direction: column;
+        height: 350px;
+        width: 300px;
+        background-color:rgb(59, 58, 58);
+        transition: all 0.5s;
+    }
+    .footdiv {
+        width: 500px;
+        flex-direction: column;
+    }
+    li{
+        font-size: 0.5rem;
+    }
+    .image {
+        height: 70%;
+        width: 17rem;
+    }
+    .inputcontact {
+        width: 7rem;
+    }
+    .navitems {
+        margin: auto;
+    }
+    .kar {
+        position: relative;
+        margin: auto;
+    }
+    .checkbtn{
+        display: block;
+        color: white;
+       float: right;
+       font-size: 1.5rem;
+       line-height: 42px;
+       margin-right: 15px;
+    }
+    #click:checked ~ .navbar{
+        display:flex;
+        right: 0px;
+        top:0px;
+    } 
+}
