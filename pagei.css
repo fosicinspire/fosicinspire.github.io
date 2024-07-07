@@ -409,16 +409,10 @@ a {
         width: 300px;
         background-color:rgb(59, 58, 58);
         transition: all 0.5s;
-        z-index: 1;
     }
     #click:checked ~ .navbar{
         display:flex;
         right: 0px;
         top:0px;
-        z-index: 1;
     } 
-    .full-size-div{
-        position: absolute;
-        z-index: -1;
-    }
 }
