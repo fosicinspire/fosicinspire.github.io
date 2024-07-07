@@ -8,6 +8,14 @@ body {
     width: auto;
     background-color: #ffffff;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -o-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    /* For older browsers */
+    touch-action: manipulation;
+    /* To prevent double tap zoom on Safari */
 }
 .mobnav {
     height: 42px;
