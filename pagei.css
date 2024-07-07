@@ -338,6 +338,7 @@ body {
         margin-left: 0px;
         box-shadow: none;
         border-radius: 0px;
+        z-index: -1;
     }
     .hater {
         opacity: 0.8;
