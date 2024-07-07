@@ -314,6 +314,7 @@ body {
         width: 300px;
         background-color:rgb(59, 58, 58);
         transition: all 0.5s;
+        z-index: 1;
     }
     li{
         font-size: 0.5rem;
@@ -344,10 +345,11 @@ body {
         display:flex;
         right: 0px;
         top:0px;
+        z-index: 1;
     } 
     .full-size-div {
-        margin-top: 0px;
-        flex-direction: column;
+       position: absolute;
+       z-index: -1;
     }
     .imagesdiv{
         height: 500px;
@@ -414,5 +416,4 @@ body {
 }
 a {
     text-decoration: none;
-}
 }
