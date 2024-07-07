@@ -304,18 +304,6 @@ body {
     .image {
         border-radius: 5px;
     }
-    .navbar {
-        position: absolute;
-        display:none;
-        right: -300px;
-        margin-top: 42px;
-        flex-direction: column;
-        height: 350px;
-        width: 300px;
-        background-color:rgb(59, 58, 58);
-        transition: all 0.5s;
-        z-index: 1;
-    }
     li{
         font-size: 0.5rem;
     }
@@ -328,6 +316,18 @@ body {
     }
     .navitems {
         margin: auto;
+    }
+     .navbar {
+        position: absolute;
+        display:none;
+        right: -300px;
+        margin-top: 42px;
+        flex-direction: column;
+        height: 350px;
+        width: 300px;
+        background-color:rgb(59, 58, 58);
+        transition: all 0.5s;
+        z-index: 1;
     }
     .kar {
         position: relative;
@@ -349,7 +349,7 @@ body {
     } 
     .full-size-div {
        position: absolute;
-       z-index: -1;
+        z-index: -1;
     }
     .imagesdiv{
         height: 500px;
@@ -416,4 +416,5 @@ body {
 }
 a {
     text-decoration: none;
+}
 }
