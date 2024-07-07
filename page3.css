@@ -58,3 +58,29 @@ input {
     margin: auto;
     margin-top: 1rem;
 }
+@media (max-width: 500px) {
+    body {
+        height: 100vh;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(addressimage2.jpg);
+    }
+    .address {
+        height: 100vh;
+        width: 450px;
+        background-image: none;
+        box-shadow: none;
+        border-radius: none;
+    }
+    .innerdiv {
+        width: 450px;
+    }
+    .info {
+        width: 450px;
+    }
+    #submitbtn {
+        width: 35%;
+    }
+}
