@@ -317,18 +317,6 @@ body {
     .navitems {
         margin: auto;
     }
-     .navbar {
-        position: absolute;
-        display:none;
-        right: -300px;
-        margin-top: 42px;
-        flex-direction: column;
-        height: 350px;
-        width: 300px;
-        background-color:rgb(59, 58, 58);
-        transition: all 0.5s;
-        z-index: 1;
-    }
     .kar {
         position: relative;
         margin: auto;
@@ -340,17 +328,7 @@ body {
        font-size: 1.5rem;
        line-height: 42px;
        margin-right: 15px;
-    }
-    #click:checked ~ .navbar{
-        display:flex;
-        right: 0px;
-        top:0px;
-        z-index: 1;
     } 
-    .full-size-div {
-       position: absolute;
-        z-index: -1;
-    }
     .imagesdiv{
         height: 500px;
         width: 500px;
@@ -417,4 +395,26 @@ body {
 a {
     text-decoration: none;
 }
+    .navbar {
+        position: absolute;
+        display:none;
+        right: -300px;
+        margin-top: 42px;
+        flex-direction: column;
+        height: 350px;
+        width: 300px;
+        background-color:rgb(59, 58, 58);
+        transition: all 0.5s;
+        z-index: 1;
+    }
+    #click:checked ~ .navbar{
+        display:flex;
+        right: 0px;
+        top:0px;
+        z-index: 1;
+    } 
+    .full-size-div{
+        position: absolute;
+        z-index: -1;
+    }
 }
