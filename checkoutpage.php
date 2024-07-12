@@ -16,8 +16,8 @@
     
 ?>
 <!DOCTYPE html>
+<html lang="en">
 <head>
-  <html lang="SESSION
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoice</title>
@@ -61,8 +61,29 @@
         .total {
             text-align: right;
         }
-        .paymentbtn{
-          text-align: right;
+        .paymentbtn {
+            text-align: right;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 500px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+            .details h2 {
+                font-size: 1.2rem;
+            }
+            table, th, td {
+                font-size: 0.9rem;
+                padding: 6px;
+            }
+            .paymentbtn {
+                text-align: center;
+            }
+            .total h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -107,81 +128,80 @@
             <h2>Total Amount Payable: <?php echo "$total/-"?></h2>
         </div>
         <div class="paymentbtn">
-          <button id="rzp-button1" class="btn btn-outline-dark btn-lg" style="background-color: rgb(255, 217, 0); border-radius: 4px; padding: 6px; font-size: 1rem;"><i class="fas fa-money-bill"></i>proceed to payment</button>
-        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-        <script>
-          var options = {
-            "key": "rzp_test_j8cjzMR1ClopZr", // Enter the Key ID generated from the Dashboard
-            "amount": "<?php echo "$total"*(100)?>",
-            "currency": "INR",
-            "description": "fosicinspire",
-            "image": "example.com/image/rzp.jpg",
-            "prefill":
-            {
-              "email": "kaifxx420@gmail.com",
-              "contact": +919528201801,
-            },
-            config: {
-              display: {
-                blocks: {
-                  utib: { //name for Axis block
-                    name: "Pay using Axis Bank",
-                    instruments: [
-                      {
-                        method: "card",
-                        issuers: ["UTIB"]
-                      },
-                      {
-                        method: "netbanking",
-                        banks: ["UTIB"]
-                      },
-                    ]
+          <button id="rzp-button1" class="btn btn-outline-dark btn-lg" style="background-color: rgb(255, 217, 0); border-radius: 4px; padding: 6px; font-size: 1rem;"><i class="fas fa-money-bill"></i> Proceed to payment</button>
+          <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+          <script>
+              var options = {
+                  "key": "rzp_test_j8cjzMR1ClopZr", // Enter the Key ID generated from the Dashboard
+                  "amount": "<?php echo "$total" * 100?>",
+                  "currency": "INR",
+                  "description": "fosicinspire",
+                  "image": "example.com/image/rzp.jpg",
+                  "prefill": {
+                      "email": "kaifxx420@gmail.com",
+                      "contact": "+919528201801"
                   },
-                  other: { //  name for other block
-                    name: "Other Payment modes",
-                    instruments: [
-                      {
-                        method: "card",
-                        issuers: ["ICIC"]
-                      },
-                      {
-                        method: 'netbanking',
+                  config: {
+                      display: {
+                          blocks: {
+                              utib: { //name for Axis block
+                                  name: "Pay using Axis Bank",
+                                  instruments: [
+                                      {
+                                          method: "card",
+                                          issuers: ["UTIB"]
+                                      },
+                                      {
+                                          method: "netbanking",
+                                          banks: ["UTIB"]
+                                      },
+                                  ]
+                              },
+                              other: { // name for other block
+                                  name: "Other Payment modes",
+                                  instruments: [
+                                      {
+                                          method: "card",
+                                          issuers: ["ICIC"]
+                                      },
+                                      {
+                                          method: 'netbanking'
+                                      }
+                                  ]
+                              }
+                          },
+                          hide: [
+                              {
+                                  method: "upi"
+                              }
+                          ],
+                          sequence: ["block.utib", "block.other"],
+                          preferences: {
+                              show_default_blocks: false // Should Checkout show its default blocks?
+                          }
                       }
-                    ]
+                  },
+                  "handler": function (response) {
+                      alert(response.razorpay_payment_id);
+                  },
+                  "modal": {
+                      "ondismiss": function () {
+                          if (confirm("Are you sure, you want to close the form?")) {
+                              txt = "You pressed OK!";
+                              console.log("Checkout form closed by the user");
+                          } else {
+                              txt = "You pressed Cancel!";
+                              console.log("Complete the Payment")
+                          }
+                      }
                   }
-                },
-                hide: [
-                  {
-                  method: "upi"
-                  }
-                ],
-                sequence: ["block.utib", "block.other"],
-                preferences: {
-                  show_default_blocks: false // Should Checkout show its default blocks?
-                }
+              };
+              var rzp1 = new Razorpay(options);
+              document.getElementById('rzp-button1').onclick = function (e) {
+                  rzp1.open();
+                  e.preventDefault();
               }
-            },
-            "handler": function (response) {
-              alert(response.razorpay_payment_id);
-            },
-            "modal": {
-              "ondismiss": function () {
-                if (confirm("Are you sure, you want to close the form?")) {
-                  txt = "You pressed OK!";
-                  console.log("Checkout form closed by the user");
-                } else {
-                  txt = "You pressed Cancel!";
-                  console.log("Complete the Payment")
-                }
-              }
-            }
-          };
-          var rzp1 = new Razorpay(options);
-          document.getElementById('rzp-button1').onclick = function (e) {
-            rzp1.open();
-            e.preventDefault();
-          }
-        </script>
+          </script>
         </div>
     </div>
 </body>
